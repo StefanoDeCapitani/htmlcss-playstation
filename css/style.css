@@ -1,4 +1,4 @@
-.u-list {
+.ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -7,26 +7,31 @@
 a {
   display: inline-block;
   text-decoration: none;
+  color: var(--clr-a);
 }
 
-.a {
-  color: var(--a-clr);
+a:hover {
+  color: var(--clr-a);
+}
+
+.nav-item__a {
   line-height: 42px;
 }
 
 .a--text-black {
-  --a-clr: #000000;
+  --clr-a: #000000;
 }
 
 .a--text-black:hover {
-  --a-clr: #000000;
+  --clr-a: #0d6efd;
 }
 
 .icon {
+  --size-icon: 1.8rem;
   position: relative;
   display: inline-block;
-  height: var(--icon-size);
-  width: var(--icon-size);
+  height: var(--size-icon);
+  width: var(--size-icon);
 }
 
 .icon::after {
@@ -36,18 +41,33 @@ a {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: var(--icon-url);
+  background-image: var(--url-icon);
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .icon--lens {
-  --icon-url: url("../img/lens.svg");
-  --icon-size: 1.8rem;
+  --url-icon: url("../img/lens.svg");
 }
 
-.btn {
-  line-height: 42px;
-  border-radius: 21px;
+.icon--hamburger {
+  --url-icon: url("../img/bars-solid.svg");
+}
+
+.icon--chevron-down {
+  --url-icon: url("../img/chevron-down-solid.svg");
+  --size-icon: 0.7rem;
+}
+
+.list-item:hover .icon--chevron-down {
+  --url-icon: url("../img/chevron-down-solid-hover.svg");
+}
+
+.btn,
+.btn:hover {
+  --border-radius-btn: 1.3rem;
+  line-height: 2.6rem;
+  border-radius: var(--border-radius-btn);
   padding: 0 0.9rem;
   border: 1px solid var(--btn-border);
   background: var(--btn-bg);
@@ -61,7 +81,26 @@ a {
 }
 
 .btn--dark:hover {
-  --btn-bg: #ffffff;
-  --btn-clr: #000000;
+  --btn-bg: #000000aa;
+}
+
+.btn--hamburger {
+  height: 100%;
   --btn-border: #000000;
+  --border-radius-btn: 0.5rem;
+  opacity: 0.3;
+}
+
+.btn--hamburger:hover {
+  opacity: 1;
+}
+
+.banner-top {
+  padding: 0.8rem;
+  background: #000000;
+  text-align: end;
+}
+
+.banner-top__sony-logo {
+  height: 1rem;
 }
