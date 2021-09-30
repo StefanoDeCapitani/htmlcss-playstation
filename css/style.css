@@ -1,100 +1,3 @@
-.ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--clr-a);
-}
-
-a:hover {
-  color: var(--clr-a);
-}
-
-.nav-item__a {
-  line-height: 42px;
-}
-
-.a--text-black {
-  --clr-a: #000000;
-}
-
-.a--text-black:hover {
-  --clr-a: #0d6efd;
-}
-
-.icon {
-  --size-icon: 1.8rem;
-  position: relative;
-  display: inline-block;
-  height: var(--size-icon);
-  width: var(--size-icon);
-}
-
-.icon::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-image: var(--url-icon);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.icon--lens {
-  --url-icon: url("../img/lens.svg");
-}
-
-.icon--hamburger {
-  --url-icon: url("../img/bars-solid.svg");
-}
-
-.icon--chevron-down {
-  --url-icon: url("../img/chevron-down-solid.svg");
-  --size-icon: 0.7rem;
-}
-
-.list-item:hover .icon--chevron-down {
-  --url-icon: url("../img/chevron-down-solid-hover.svg");
-}
-
-.btn,
-.btn:hover {
-  --border-radius-btn: 1.3rem;
-  line-height: 2.6rem;
-  border-radius: var(--border-radius-btn);
-  padding: 0 0.9rem;
-  border: 1px solid var(--btn-border);
-  background: var(--btn-bg);
-  color: var(--btn-clr);
-}
-
-.btn--dark {
-  --btn-bg: #000000;
-  --btn-clr: #ffffff;
-  --btn-border: transparent;
-}
-
-.btn--dark:hover {
-  --btn-bg: #000000aa;
-}
-
-.btn--hamburger {
-  height: 100%;
-  --btn-border: #000000;
-  --border-radius-btn: 0.5rem;
-  opacity: 0.3;
-}
-
-.btn--hamburger:hover {
-  opacity: 1;
-}
-
 .banner-top {
   padding: 0.8rem;
   background: #000000;
@@ -103,4 +6,58 @@ a:hover {
 
 .banner-top__sony-logo {
   height: 1rem;
+}
+
+.hero--1 {
+  height: 589px;
+  padding: 50px 0;
+  background-image: url(../img/returnal-cover.jpeg);
+  background-size: cover;
+  background-position: top;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section--hero {
+  height: 100%;
+  align-items: start;
+  justify-content: end;
+}
+
+.section__h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.section__p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.section--hero__img {
+  order: -1;
+  width: 60%;
+}
+
+.card-carousel {
+  padding: 2rem 0;
+}
+
+.game-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.game-card:focus-within {
+  outline: 1px solid hsl(var(--clr-secondary-hsl));
+  outline-offset: 4px;
+}
+
+.game-card__img {
+  width: 100%;
 }

@@ -1,0 +1,117 @@
+:root {
+  --clr-primary-hsl: 0, 0%, 100%;
+  --clr-secondary-hsl: 222, 79%, 54%;
+  --clr-accent-hsl: 15, 86%, 43%;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-a);
+}
+
+a:hover {
+  color: var(--clr-a);
+}
+
+.nav-item__a {
+  line-height: 42px;
+}
+
+.a--text-black {
+  --clr-a: #000000;
+}
+
+.a--text-black:hover {
+  --clr-a: #0d6efd;
+}
+
+.text-clr-primary {
+  color: hsl(var(--clr-primary-hsl));
+}
+
+.icon {
+  --size-icon: 1.8rem;
+  position: relative;
+  display: inline-block;
+  height: var(--size-icon);
+  width: var(--size-icon);
+}
+
+.icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: var(--url-icon);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon--lens {
+  --url-icon: url("../img/lens.svg");
+}
+
+.icon--lens:hover {
+  opacity: 0.5;
+}
+
+.icon--hamburger {
+  --url-icon: url("../img/bars-solid.svg");
+}
+
+.icon--chevron-down {
+  --url-icon: url("../img/chevron-down-solid.svg");
+  --size-icon: 0.7rem;
+}
+
+.list-item:hover .icon--chevron-down {
+  --url-icon: url("../img/chevron-down-solid-hover.svg");
+}
+
+.btn,
+.btn:hover {
+  --btn-border: transparent;
+  --border-radius-btn: 1.3rem;
+  line-height: 2.6rem;
+  border-radius: var(--border-radius-btn);
+  padding: 0 0.9rem;
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--btn-clr);
+}
+
+.btn--dark {
+  --btn-bg: #000000;
+  --btn-clr: hsl(var(--clr-primary-hsl));
+}
+
+.btn--dark:hover {
+  --btn-bg: #000000aa;
+}
+
+.btn--accent {
+  --btn-bg: hsl(var(--clr-accent-hsl));
+  --btn-clr: hsl(var(--clr-primary-hsl));
+}
+
+.btn--hamburger {
+  height: 100%;
+  --btn-border: #000000;
+  --border-radius-btn: 0.5rem;
+  opacity: 0.3;
+}
+
+.btn--hamburger:hover {
+  opacity: 1;
+}
