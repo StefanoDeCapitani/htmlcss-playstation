@@ -1,0 +1,67 @@
+.u-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.a {
+  color: var(--a-clr);
+  line-height: 42px;
+}
+
+.a--text-black {
+  --a-clr: #000000;
+}
+
+.a--text-black:hover {
+  --a-clr: #000000;
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+
+.icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: var(--icon-url);
+  background-size: contain;
+}
+
+.icon--lens {
+  --icon-url: url("../img/lens.svg");
+  --icon-size: 1.8rem;
+}
+
+.btn {
+  line-height: 42px;
+  border-radius: 21px;
+  padding: 0 0.9rem;
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--btn-clr);
+}
+
+.btn--dark {
+  --btn-bg: #000000;
+  --btn-clr: #ffffff;
+  --btn-border: transparent;
+}
+
+.btn--dark:hover {
+  --btn-bg: #ffffff;
+  --btn-clr: #000000;
+  --btn-border: #000000;
+}
