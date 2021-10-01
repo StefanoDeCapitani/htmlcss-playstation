@@ -6,6 +6,7 @@
 
   --bg-black-hsl: 0, 0%, 0%;
   --bg-dark-hsl: var(--clr-dark-hsl);
+  --bg-gray-hsl: 20, 2%, 74%;
 
   --fs-xl: 2.5rem;
   --fs-lg: 2.3rem;
@@ -37,7 +38,7 @@ a:hover {
   color: var(--clr-a);
 }
 
-.my-gap-lg > .col {
+.my-gy-lg > .col {
   padding-top: calc(var(--section-padding-md) / 2);
   padding-bottom: calc(var(--section-padding-md) / 2);
 }
@@ -145,6 +146,11 @@ a:hover {
 
 .my-btn--hamburger:hover {
   opacity: 1;
+}
+
+.my-btn--primary {
+  --btn-bg: var(--clr-primary-hsl);
+  --btn-clr: var(--clr-secondary-hsl);
 }
 
 .my-btn--secondary {
