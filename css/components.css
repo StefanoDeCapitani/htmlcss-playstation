@@ -8,6 +8,7 @@
   --bg-black-hsl: var(--clr-black-hsl);
   --bg-dark-hsl: var(--clr-dark-hsl);
   --bg-dark-blue-hsl: 230, 46%, 16%;
+  --bg-blue-hsl: 214, 100%, 31%;
   --bg-gray-hsl: 20, 2%, 74%;
 
   --fs-xl: 2.5rem;

@@ -97,6 +97,11 @@
   opacity: 0.8;
 }
 
+.footer {
+  background-color: hsl(var(--bg-blue-hsl));
+  padding: var(--section-padding-lg) 0;
+}
+
 @media only screen and (min-width: 768px) {
   .product-card__img {
     flex: 0 1 200px;
