@@ -2,8 +2,23 @@
   --clr-primary-hsl: 0, 0%, 100%;
   --clr-secondary-hsl: 222, 79%, 54%;
   --clr-accent-hsl: 15, 86%, 43%;
+  --clr-dark-hsl: 0, 0%, 12%;
+
+  --bg-black-hsl: 0, 0%, 0%;
+  --bg-dark-hsl: var(--clr-dark-hsl);
+
+  --fs-xl: 2.5rem;
+  --fs-lg: 2.3rem;
+  --fs-md: 1.5rem;
+  --fs-sm: 1rem;
+  --fs-xs: 0.9rem;
+
+  --section-padding-sm: 2rem;
+  --section-padding-md: 50px;
+  --section-padding-lg: 70px;
 
   font-family: Arial, Helvetica, sans-serif;
+  color: hsl(var(--clr-dark-hsl));
 }
 
 .ul {
@@ -31,7 +46,11 @@ a:hover {
 }
 
 .a--text-black:hover {
-  --clr-a: #0d6efd;
+  --clr-a: hsl(var(--clr-secondary-hsl)); /* #0d6efd; */
+}
+
+.text-clr-primary {
+  color: hsl(var(--clr-primary-hsl));
 }
 
 .text-clr-primary {
@@ -79,8 +98,8 @@ a:hover {
   --url-icon: url("../img/chevron-down-solid-hover.svg");
 }
 
-.btn,
-.btn:hover {
+.my-btn,
+.my-btn:hover {
   --btn-border: transparent;
   --border-radius-btn: 1.3rem;
   line-height: 2.6rem;
@@ -91,27 +110,32 @@ a:hover {
   color: var(--btn-clr);
 }
 
-.btn--dark {
+.my-btn--dark {
   --btn-bg: #000000;
   --btn-clr: hsl(var(--clr-primary-hsl));
 }
 
-.btn--dark:hover {
+.my-btn--dark:hover {
   --btn-bg: #000000aa;
 }
 
-.btn--accent {
+.my-btn--accent {
   --btn-bg: hsl(var(--clr-accent-hsl));
   --btn-clr: hsl(var(--clr-primary-hsl));
 }
 
-.btn--hamburger {
+.my-btn--accent:hover {
+  --btn-bg: hsla(var(--clr-accent-hsl), 0.8);
+  --btn-clr: hsl(var(--clr-primary-hsl));
+}
+
+.my-btn--hamburger {
   height: 100%;
   --btn-border: #000000;
   --border-radius-btn: 0.5rem;
   opacity: 0.3;
 }
 
-.btn--hamburger:hover {
+.my-btn--hamburger:hover {
   opacity: 1;
 }

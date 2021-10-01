@@ -10,7 +10,6 @@
 
 .hero--1 {
   height: 589px;
-  padding: 50px 0;
   background-image: url(../img/returnal-cover.jpeg);
   background-size: cover;
   background-position: top;
@@ -18,8 +17,10 @@
 
 .section {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   gap: 2rem;
+  padding-top: var(--section-padding-lg);
+  padding-bottom: var(--section-padding-lg);
 }
 
 .section--text-center {
@@ -31,25 +32,48 @@
   height: 100%;
   align-items: start;
   justify-content: end;
+  padding-top: var(--section-padding-md);
+  padding-bottom: var(--section-padding-md);
+}
+
+.section--new-releases {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .section__h1 {
-  font-size: 2.5rem;
+  font-size: var(--fs-lg);
   margin-bottom: 0;
 }
 
-.section__p {
-  font-size: 1rem;
+.section__h2 {
+  font-size: var(--fs-md);
   margin-bottom: 0;
+}
+
+.section__h1 > span {
+  font-size: var(--fs-md);
+  color: hsl(var(--clr-secondary-hsl));
+}
+
+.section__p,
+.product-card__p {
+  font-size: var(--fs-sm);
+  margin-bottom: 0;
+}
+
+.section__btn {
+  align-self: start;
 }
 
 .section--hero__img {
   order: -1;
-  width: 60%;
+  max-width: 50%;
 }
 
-.card-carousel {
-  padding: 2rem 0;
+.cards-carousel {
+  padding-top: var(--section-padding-sm);
+  padding-bottom: var(--section-padding-sm);
 }
 
 .game-card {
@@ -58,11 +82,60 @@
   cursor: pointer;
 }
 
+.game-card__img,
+.playstation-showcase__img,
+.product-card__img,
+.new-release-card__img {
+  max-width: 100%;
+}
+
 .game-card.active {
   outline: 1px solid hsl(var(--clr-secondary-hsl));
   outline-offset: 4px;
 }
 
-.game-card__img {
-  width: 100%;
+.product-card__p {
+  flex: 1 0 3rem;
+  text-align: center;
+}
+
+.product-card__p,
+.new-release-card__p {
+  margin: 0.8rem 0;
+}
+
+.product-card.active {
+  border-bottom: 4px solid hsla(var(--clr-secondary-hsl), 0.7);
+}
+
+.hero--2 {
+  height: 620px;
+  background-image: url(../img/it-takes-two-hero-banner-desktop.jpg);
+  background-size: cover;
+  background-position: top;
+}
+
+.new-releases {
+  background: hsl(var(--bg-dark-hsl));
+  padding-top: var(--section-padding-md);
+  padding-bottom: var(--section-padding-md);
+}
+
+.new-releases__section {
+  gap: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .product-card__img {
+    flex: 0 1 200px;
+    align-self: center;
+    min-height: 100px;
+    max-height: 200px;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+  }
 }

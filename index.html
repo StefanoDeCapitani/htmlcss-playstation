@@ -66,7 +66,7 @@
               </a>
             </li>
             <li class="list-item">
-              <a href="#" class="btn btn--dark"> Accedi </a>
+              <a href="#" class="my-btn my-btn--dark"> Accedi </a>
             </li>
             <li class="list-item pt-1">
               <a href="#" class="list-item__a"
@@ -76,7 +76,7 @@
           </ul>
           <div
             class="
-              btn btn--hamburger
+              my-btn my-btn--hamburger
               d-flex
               align-items-center
               ms-auto
@@ -89,17 +89,21 @@
       </nav>
     </header>
     <main>
-      <div class="hero--1">
+      <div class="hero--1 text-clr-primary">
         <div class="container h-100">
           <div class="row h-100">
-            <section class="col-lg-4 section section--hero text-clr-primary">
+            <section
+              class="col col-lg-4 section section--hero text-clr-primary"
+            >
               <h1 class="section__h1">Rompi il cerchio</h1>
               <p class="section__p">
                 Rialzati dopo ogni sconfitta e affronta una nuova sfida con ogni
                 rinascita di questo esplosivo thriller fantascentifico,
                 disponibile in esclusiva su PS5.
               </p>
-              <a href="#" class="btn btn--accent"> Acquista ora </a>
+              <a href="#" class="section__btn my-btn my-btn--accent">
+                Acquista ora
+              </a>
               <img
                 class="section--hero__img"
                 src="img/returnal-hero-banner-logo.png"
@@ -109,8 +113,8 @@
           </div>
         </div>
       </div>
-      <div class="container card-carousel">
-        <div class="row">
+      <div class="container cards-carousel cards-carousel--games">
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-6 gy-3">
           <div class="col">
             <a class="game-card active" href="#">
               <img
@@ -170,21 +174,285 @@
       <div class="playstation-showcase">
         <div class="container">
           <section class="section section--text-center">
-            <h1 class="section__h1">Ecco la PlayStation 5</h1>
+            <h1 class="section__h1">
+              <span class="d-block text-uppercase">Play has no limits</span>Ecco
+              la PlayStation 5
+            </h1>
             <p class="section__p">
               Tuffati in nuove possibilità di gioco completamente inaspettate
             </p>
           </section>
-          <div class="row">
-            <div class="col">
+          <div class="row row-cols-2">
+            <div class="col d-flex align-items-center">
               <section class="section">
                 <h1 class="section__h1">Console PlayStation 5</h1>
                 <p class="section__p">
                   Sperimenta la nuova generazione di incredibili giochi
                   PlayStation.
                 </p>
-                <a href="#" class="btn btn--accent"> Acquista ora </a>
+                <a href="#" class="section__btn my-btn my-btn--accent">
+                  Acquista ora
+                </a>
               </section>
+            </div>
+            <div class="col">
+              <img
+                src="img/playstation-5-thumb.png"
+                alt="PlayStation 5"
+                class="playstation-showcase__img"
+              />
+            </div>
+          </div>
+          <div
+            class="
+              row row-cols-3 row-cols-md-5
+              cards-carousel cards-carousel--products
+            "
+          >
+            <div class="col">
+              <a class="product-card active" href="#"
+                ><img
+                  class="product-card__img"
+                  src="img/playstation-5-thumb.png"
+                  alt="PlayStation"
+                />
+                <p class="product-card__p d-none d-md-block">Console PS5</p>
+              </a>
+            </div>
+            <div class="col">
+              <a class="product-card" href="#"
+                ><img
+                  class="product-card__img"
+                  src="img/joypad-thumb.png"
+                  alt="Controller wireless"
+                />
+                <p class="product-card__p d-none d-md-block">
+                  Controller Wireless DualSense&trade;
+                </p></a
+              >
+            </div>
+            <div class="col">
+              <a href="#" class="product-card"
+                ><img
+                  class="product-card__img"
+                  src="img/headset-thumb.png"
+                  alt=""
+                />
+                <p class="product-card__p d-none d-md-block">
+                  Cuffie wireless con microfono PULSE 3&trade;
+                </p></a
+              >
+            </div>
+            <div class="col">
+              <a class="product-card" href="#"
+                ><img
+                  class="product-card__img"
+                  src="img/remote-thumb.png"
+                  alt=""
+                />
+                <p class="product-card__p d-none d-md-block">
+                  Telecomando Media
+                </p></a
+              >
+            </div>
+            <div class="col">
+              <a class="product-card" href="#"
+                ><img
+                  class="product-card__img"
+                  src="img/camera-thumb.jpg"
+                  alt=""
+                />
+                <p class="product-card__p d-none d-md-block">
+                  Telecamera HD
+                </p></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero--2 text-clr-primary">
+        <div class="container h-100">
+          <div class="row h-100">
+            <section
+              class="col col-lg-4 section section--hero text-clr-primary"
+            >
+              <h1 class="section__h1">
+                Un'avventura cooperativa selvaggia ti attende
+              </h1>
+              <p class="section__p">
+                Trova un amico e partite insieme per l'avventura più folle delle
+                vostre vite in It Takes Two, un gioco di avventura cooperativa a
+                piattaforme che stravolge il suo genere.
+              </p>
+              <a href="#" class="section__btn my-btn my-btn--accent">
+                Acquista ora
+              </a>
+              <img
+                class="section--hero__img"
+                src="img/it-takes-two-logo.png"
+                alt="Returnal logo"
+              />
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="new-releases text-clr-primary">
+        <div class="container">
+          <section class="section section--new-releases">
+            <h2 class="section__h2">Nuove uscite</h2>
+            <p class="section__p">
+              Giochi incredibili per PS4 e PS5 disponibili ora
+            </p>
+          </section>
+          <div
+            class="
+              row row-cols-2 row-cols-sm-3 row-cols-lg-6
+              cards-carousel cards-carousel--new-releases
+            "
+          >
+            <div class="col">
+              <a class="new-release-card" href="#">
+                <img
+                  class="new-release-card__img"
+                  src="img/tony-hawks-pro-skater-1-2-store-art.jpg"
+                  alt=""
+                />
+                <p class="new-release-card__p">
+                  Tony Hawk's&trade; Pro Skater&trade; 1 + 2
+                </p>
+              </a>
+            </div>
+            <div class="col">
+              <a class="new-release-card" href="#">
+                <img
+                  class="new-release-card__img"
+                  src="img/crash-bandicoot-4-its-about-time-store-art.jpg"
+                  alt=""
+                />
+                <p class="new-release-card__p">
+                  Crash Bandicoot 4: It's About Time
+                </p>
+              </a>
+            </div>
+            <div class="col">
+              <a class="new-release-card" href="#">
+                <img
+                  class="new-release-card__img"
+                  src="img/tony-hawks-pro-skater-1-2-store-art.jpg"
+                  alt=""
+                />
+                <p class="new-release-card__p">
+                  Tony Hawk's&trade; Pro Skater&trade; 1 + 2
+                </p>
+              </a>
+            </div>
+            <div class="col">
+              <a class="new-release-card" href="#">
+                <img
+                  class="new-release-card__img"
+                  src="img/crash-bandicoot-4-its-about-time-store-art.jpg"
+                  alt=""
+                />
+                <p class="new-release-card__p">
+                  Crash Bandicoot 4: It's About Time
+                </p>
+              </a>
+            </div>
+            <div class="col">
+              <a class="new-release-card" href="#">
+                <img
+                  class="new-release-card__img"
+                  src="img/tony-hawks-pro-skater-1-2-store-art.jpg"
+                  alt=""
+                />
+                <p class="new-release-card__p">
+                  Tony Hawk's&trade; Pro Skater&trade; 1 + 2
+                </p>
+              </a>
+            </div>
+            <div class="col">
+              <a class="new-release-card" href="#">
+                <img
+                  class="new-release-card__img"
+                  src="img/crash-bandicoot-4-its-about-time-store-art.jpg"
+                  alt=""
+                />
+                <p class="new-release-card__p">
+                  Crash Bandicoot 4: It's About Time
+                </p>
+              </a>
+            </div>
+            <div class="col">
+              <a class="new-release-card" href="#">
+                <img
+                  class="new-release-card__img"
+                  src="img/tony-hawks-pro-skater-1-2-store-art.jpg"
+                  alt=""
+                />
+                <p class="new-release-card__p">
+                  Tony Hawk's&trade; Pro Skater&trade; 1 + 2
+                </p>
+              </a>
+            </div>
+            <div class="col">
+              <a class="new-release-card" href="#">
+                <img
+                  class="new-release-card__img"
+                  src="img/crash-bandicoot-4-its-about-time-store-art.jpg"
+                  alt=""
+                />
+                <p class="new-release-card__p">
+                  Crash Bandicoot 4: It's About Time
+                </p>
+              </a>
+            </div>
+            <div class="col">
+              <a class="new-release-card" href="#">
+                <img
+                  class="new-release-card__img"
+                  src="img/tony-hawks-pro-skater-1-2-store-art.jpg"
+                  alt=""
+                />
+                <p class="new-release-card__p">
+                  Tony Hawk's&trade; Pro Skater&trade; 1 + 2
+                </p>
+              </a>
+            </div>
+            <div class="col">
+              <a class="new-release-card" href="#">
+                <img
+                  class="new-release-card__img"
+                  src="img/crash-bandicoot-4-its-about-time-store-art.jpg"
+                  alt=""
+                />
+                <p class="new-release-card__p">
+                  Crash Bandicoot 4: It's About Time
+                </p>
+              </a>
+            </div>
+            <div class="col">
+              <a class="new-release-card" href="#">
+                <img
+                  class="new-release-card__img"
+                  src="img/tony-hawks-pro-skater-1-2-store-art.jpg"
+                  alt=""
+                />
+                <p class="new-release-card__p">
+                  Tony Hawk's&trade; Pro Skater&trade; 1 + 2
+                </p>
+              </a>
+            </div>
+            <div class="col">
+              <a class="new-release-card" href="#">
+                <img
+                  class="new-release-card__img"
+                  src="img/crash-bandicoot-4-its-about-time-store-art.jpg"
+                  alt=""
+                />
+                <p class="new-release-card__p">
+                  Crash Bandicoot 4: It's About Time
+                </p>
+              </a>
             </div>
           </div>
         </div>
