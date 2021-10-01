@@ -74,9 +74,8 @@
   gap: 1rem;
 }
 
-.my-gy-lg > .col {
-  padding-top: calc(var(--section-padding-md) / 2);
-  padding-bottom: calc(var(--section-padding-md) / 2);
+.playstation-showcase--4 > .container > .section > .section__p {
+  padding-bottom: var(--section-padding-sm);
 }
 
 .hero--3 {
