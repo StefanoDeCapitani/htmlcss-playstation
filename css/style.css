@@ -15,65 +15,6 @@
   background-position: top;
 }
 
-.section {
-  display: flex;
-  flex-flow: column;
-  gap: 2rem;
-  padding-top: var(--section-padding-lg);
-  padding-bottom: var(--section-padding-lg);
-}
-
-.section--text-center {
-  align-items: center;
-  text-align: center;
-}
-
-.section--hero {
-  height: 100%;
-  align-items: start;
-  justify-content: end;
-}
-
-.section--p-md {
-  padding-top: var(--section-padding-md);
-  padding-bottom: var(--section-padding-md);
-}
-
-.section--p-0 {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.section__h1 {
-  font-size: var(--fs-lg);
-  margin-bottom: 0;
-}
-
-.section__h2 {
-  font-size: var(--fs-md);
-  margin-bottom: 0;
-}
-
-.section__h1 > span {
-  font-size: var(--fs-md);
-  color: hsl(var(--clr-secondary-hsl));
-}
-
-.section__p,
-.product-card__p {
-  font-size: var(--fs-sm);
-  margin-bottom: 0;
-}
-
-.section__btn {
-  align-self: start;
-}
-
-.section--hero__img {
-  order: -1;
-  max-width: 50%;
-}
-
 .cards-carousel {
   padding-top: var(--section-padding-sm);
   padding-bottom: var(--section-padding-sm);
@@ -91,6 +32,7 @@
 
 .game-card__img,
 .playstation-showcase__img,
+.store-showcase__img,
 .product-card__img,
 .new-release-card__img {
   max-width: 100%;
@@ -132,13 +74,28 @@
   gap: 1rem;
 }
 
+.my-gy-lg > .col {
+  padding-top: calc(var(--section-padding-md) / 2);
+  padding-bottom: calc(var(--section-padding-md) / 2);
+}
+
 .hero--3 {
   height: 400px;
   background-color: hsl(var(--bg-gray-hsl));
 }
 
-.hero--3__img {
+.hero--4 {
+  height: 285px;
+  background-color: hsl(var(--bg-dark-blue-hsl));
+}
+
+.hero--3__img,
+.hero--4__img {
   max-height: 100%;
+}
+
+.store-showcase__img:hover {
+  opacity: 0.8;
 }
 
 @media only screen and (min-width: 768px) {
