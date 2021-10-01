@@ -6,6 +6,10 @@
   --clr-a: hsl(var(--clr-secondary-hsl)); /* #0d6efd; */
 }
 
+.a--link-underline {
+  text-decoration: underline;
+}
+
 .text-clr-primary {
   color: hsl(var(--clr-primary-hsl));
 }
