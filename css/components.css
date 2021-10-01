@@ -37,6 +37,11 @@ a:hover {
   color: var(--clr-a);
 }
 
+.my-gap-lg > .col {
+  padding-top: calc(var(--section-padding-md) / 2);
+  padding-bottom: calc(var(--section-padding-md) / 2);
+}
+
 .nav-item__a {
   line-height: 42px;
 }
@@ -105,28 +110,30 @@ a:hover {
   line-height: 2.6rem;
   border-radius: var(--border-radius-btn);
   padding: 0 0.9rem;
-  border: 1px solid var(--btn-border);
-  background: var(--btn-bg);
-  color: var(--btn-clr);
+  border: 1px solid hsla(var(--btn-border));
+  color: hsl(var(--btn-clr));
+}
+
+.my-btn {
+  background: hsl(var(--btn-bg));
+}
+
+.my-btn:hover {
+  background: hsla(var(--btn-bg), 0.8);
 }
 
 .my-btn--dark {
-  --btn-bg: #000000;
-  --btn-clr: hsl(var(--clr-primary-hsl));
-}
-
-.my-btn--dark:hover {
-  --btn-bg: #000000aa;
+  --btn-bg: var(--bg-dark-hsl);
+  --btn-clr: var(--clr-primary-hsl);
 }
 
 .my-btn--accent {
-  --btn-bg: hsl(var(--clr-accent-hsl));
-  --btn-clr: hsl(var(--clr-primary-hsl));
+  --btn-bg: var(--clr-accent-hsl);
+  --btn-clr: var(--clr-primary-hsl);
 }
 
 .my-btn--accent:hover {
-  --btn-bg: hsla(var(--clr-accent-hsl), 0.8);
-  --btn-clr: hsl(var(--clr-primary-hsl));
+  --btn-clr: var(--clr-primary-hsl);
 }
 
 .my-btn--hamburger {
@@ -138,4 +145,9 @@ a:hover {
 
 .my-btn--hamburger:hover {
   opacity: 1;
+}
+
+.my-btn--secondary {
+  --btn-bg: var(--clr-secondary-hsl);
+  --btn-clr: var(--clr-primary-hsl);
 }
