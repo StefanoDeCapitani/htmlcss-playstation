@@ -33,13 +33,14 @@ D: MEDIA QUERIES
 }
 
 .banner-top {
-  padding: 0.8rem;
-  background: #000000;
+  padding: 0.4rem 0.8rem;
+  background: hsl(var(--bg-black-hsl));
   text-align: end;
 }
 
 .banner-top__sony-logo {
-  height: 1rem;
+  height: 0.8rem;
+  vertical-align: baseline;
 }
 
 /* !! 1. NAV !! */
@@ -50,7 +51,25 @@ D: MEDIA QUERIES
   box-shadow: 0 0 10px 0 hsla(var(--clr-dark-hsl), 0.4);
 }
 
+.nav__logo {
+  width: 50px;
+  order: -1;
+}
+
+.nav__logo img {
+  height: 50px;
+  transition: all 0.3s;
+}
+
 /* -Main list- */
+
+.list-item__a {
+  line-height: 50px;
+}
+
+.list-item {
+  transition: all 0.3s;
+}
 
 .list-item .icon--chevron-down {
   transition: transform 0.3s;
@@ -70,25 +89,44 @@ D: MEDIA QUERIES
 .sub-menu {
   /*Sub-menu hidden by default*/
   position: absolute;
-  top: -500px;
+  top: -100px;
   left: 0;
   width: 100%;
   height: 0;
-  background-color: hsl(var(--clr-primary-hsl));
-  display: flex;
-  opacity: 0;
-  z-index: -1;
-  flex-direction: column;
   transform-origin: top;
-  transition: all 0.5s;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.nav .ul:focus-within ~ .nav__logo img {
+  height: 33px;
+}
+
+.nav .ul:focus-within .list-item {
+  padding-top: 0.5rem;
+  font-size: var(--fs-xs);
+}
+
+.nav .ul:focus-within ~ div .my-btn,
+.nav .ul:focus-within .list-item__a {
+  line-height: 25px;
+}
+
+.nav .ul:focus-within ~ div .icon--lens {
+  --size-icon: 1.5rem;
+}
+
+.nav .ul:focus-within {
+  height: 250px;
 }
 
 .list-item:focus-within .sub-menu {
-  /*Sub-menu hown on list-item:focus-within*/
-  height: 180px;
+  top: 62px;
+  height: 200px;
   opacity: 1;
-  top: 65px;
 }
 
 /*Sub-menu icon-links*/
@@ -96,9 +134,23 @@ D: MEDIA QUERIES
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
   flex-grow: 1;
   text-align: center;
+}
+
+.sub-nav__link {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.sub-nav__link:hover {
+  border-radius: 0.2rem;
+  box-shadow: 0 0 10px 0 hsla(var(--clr-dark-hsl), 0.4);
 }
 
 .sub-menu p {
@@ -109,7 +161,9 @@ D: MEDIA QUERIES
 
 .sub-sub-nav {
   display: flex;
+  justify-self: flex-end;
   justify-content: center;
+  flex-grow: 0;
   gap: 3rem;
   padding: 0.5rem 0;
   border-top: 1px solid hsla(var(--bg-dark-hsl), 0.3);
@@ -133,7 +187,7 @@ D: MEDIA QUERIES
 
 /* !! 1. Hero--1 section !! */
 .hero--1 {
-  margin-top: 115px;
+  margin-top: 100px;
   height: 589px;
   background-image: url(../img/returnal-cover.jpeg);
   background-size: cover;
@@ -167,7 +221,6 @@ D: MEDIA QUERIES
 
 .game-card:hover:not(.active) .game-card__img {
   transform: translateY(-8px);
-  transition: transform 0.3s;
 }
 
 .game-card::before {
@@ -177,7 +230,7 @@ D: MEDIA QUERIES
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: hsla(var(--clr-dark-hsl), 0.8);
+  background-color: hsla(var(--clr-dark-hsl), 0.3);
   border-radius: 1.3rem;
   filter: blur(5px);
   transition: all 0.3s;
@@ -185,8 +238,7 @@ D: MEDIA QUERIES
 }
 
 .game-card:hover:not(.active)::before {
-  transform: translateY(-8px);
-  background-color: hsla(var(--clr-dark-hsl), 0.4);
+  background-color: hsla(var(--clr-dark-hsl), 0.5);
 }
 
 .game-card.active::after {

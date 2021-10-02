@@ -30,12 +30,9 @@
       </div>
       <!-- NAV Start-->
       <nav class="nav">
-        <div class="d-flex align-items-center w-100 px-3 py-2">
-          <a href="#" class="me-3">
-            <img src="img/play_logo.svg" alt="Playstation logo" />
-          </a>
+        <div class="d-flex align-items-start w-100 px-3 py-2">
           <!-- DESKTOP NAV start-->
-          <ul class="d-none d-lg-flex align-items-center w-100 gap-4">
+          <ul class="ul d-none d-lg-flex align-items-start w-100 gap-4">
             <!-- GAMES LINK start-->
             <li class="list-item">
               <a href="#" class="list-item__a a--text-black"
@@ -273,29 +270,37 @@
                   </li>
                 </ul>
                 <ul class="sub-sub-nav">
-                  <li><a href="#">sub link my playstation</a></li>
-                  <li><a href="#">sub link</a></li>
-                  <li><a href="#">sub link</a></li>
+                  <li>
+                    <a class="" href="#">sub link my playstation</a>
+                  </li>
+                  <li><a class="" href="#">sub link</a></li>
+                  <li><a class="" href="#">sub link</a></li>
                 </ul>
               </div>
             </li>
             <!-- MY PLASTATION LINK end-->
-
-            <!-- SIGN IN BUTTON start-->
-            <li class="list-item">
-              <a href="#" class="my-btn my-btn--dark"> Accedi </a>
-            </li>
-            <!-- SIGN IN BUTTON end-->
-
-            <!-- LENS ICON LINK start-->
-            <li class="list-item pt-1">
-              <a href="#" class="list-item__a"
-                ><i class="icon icon--lens"></i>
-              </a>
-            </li>
-            <!-- LENS ICON LINK end-->
           </ul>
+
+          <!-- PS LOGO Start -->
+          <a href="#" class="nav__logo me-3">
+            <img src="img/play_logo.svg" alt="Playstation logo" />
+          </a>
+          <!-- PS LOGO End -->
+
+          <!-- SIGN IN BUTTON start-->
+          <div class="d-none d-lg-block ps-3 pe-2 pt-1">
+            <a href="#" class="my-btn my-btn--dark"> Accedi </a>
+          </div>
+          <!-- SIGN IN BUTTON end-->
+
+          <!-- LENS ICON LINK start-->
+          <div class="d-none d-lg-block ps-2 pt-2">
+            <a href="#" class=""><i class="icon icon--lens"></i> </a>
+          </div>
+          <!-- LENS ICON LINK end-->
+
           <!-- DESKTOP NAV End-->
+
           <!-- HAMBUERGER NAV Start -->
           <div class="hamburgher-menu ms-auto">
             <a
