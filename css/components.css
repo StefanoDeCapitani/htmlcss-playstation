@@ -1,3 +1,25 @@
+/*======================================
+
+Table of contents:
+
+A: RESET
+B: LAYOUT COMPONENTS
+    - Section
+C: BUTTONS
+D: CUSTOM ICONS
+
+======================================*/
+
+/* >> A: RESET >> */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --clr-primary-hsl: 0, 0%, 100%;
   --clr-secondary-hsl: 222, 79%, 54%;
@@ -13,7 +35,7 @@
 
   --fs-xl: 2.5rem;
   --fs-lg: 2.3rem;
-  --fs-md: 1.5rem;
+  --fs-md: 1.3rem;
   --fs-sm: 1rem;
   --fs-xs: 0.9rem;
 
@@ -37,9 +59,14 @@ a {
   color: var(--clr-a);
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: var(--clr-a);
 }
+
+/* >> B: LAYOUT COMPONENTS >> */
+
+/*Section*/
 
 .section {
   display: flex;
@@ -57,7 +84,7 @@ a:hover {
 .section--hero {
   height: 100%;
   align-items: start;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .section--p-md {
@@ -104,6 +131,100 @@ a:hover {
   line-height: 42px;
 }
 
+/* >> C: BUTTONS >> */
+
+.my-btn,
+.my-btn:hover {
+  --border-radius-btn: 1.5rem;
+  line-height: 2.4rem;
+  border-radius: var(--border-radius-btn);
+  padding: 0 0.9rem;
+  color: hsl(var(--btn-clr));
+}
+
+.my-btn {
+  background: hsl(var(--btn-bg));
+  border: 2px solid hsl(var(--btn-border));
+  box-shadow: 0 0 0 2px hsl(var(--btn-bg));
+}
+
+.my-btn--accent::after,
+.my-btn {
+  transition: border 0.3s, opacity 0.3s;
+}
+
+.my-btn:hover,
+.my-btn:focus {
+  color: hsl(var(--btn-clr));
+  border: 2px solid hsla(var(--btn-hover-border));
+}
+
+.my-btn--dark {
+  --btn-bg: var(--bg-dark-hsl);
+  --btn-clr: var(--clr-primary-hsl);
+  --btn-border: var(--btn-bg);
+  --btn-hover-border: var(--clr-primary-hsl);
+}
+
+.my-btn--primary {
+  --btn-bg: var(--clr-primary-hsl);
+  --btn-clr: var(--clr-secondary-hsl);
+  --btn-border: var(--btn-bg);
+  --btn-hover-border: var(--btn-clr);
+}
+
+.my-btn--primary.my-text-black {
+  --btn-hover-border: var(--clr-black-hsl);
+}
+
+.my-btn--secondary {
+  --btn-bg: var(--clr-secondary-hsl);
+  --btn-clr: var(--clr-primary-hsl);
+  --btn-border: var(--btn-bg);
+  --btn-hover-border: var(--clr-primary-hsl);
+}
+
+.my-btn--accent {
+  --btn-bg: var(--clr-accent-hsl);
+  --btn-clr: var(--clr-primary-hsl);
+  box-shadow: none;
+  border: none;
+  position: relative;
+  margin-left: 4px;
+}
+
+.my-btn--accent::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 5px solid hsl(var(--btn-bg));
+  border-radius: var(--border-radius-btn);
+}
+
+.my-btn--accent:hover::after,
+.my-btn--accent:focus::after {
+  border: 2px solid hsl(var(--btn-bg));
+}
+
+.my-btn--hamburger {
+  height: 3rem;
+  width: 3.5rem;
+  --btn-border: var(--clr-dark-hsl);
+  --border-radius-btn: 0.5rem;
+  opacity: 1;
+}
+
+.my-btn--hamburger:hover {
+  --btn-hover-border: var(--clr-black-hsl);
+  --border-radius-btn: 0.5rem;
+  opacity: 0.3;
+}
+
+/* >> D: CUSTOM ICONS >> */
+
 .icon {
   --size-icon: 1.8rem;
   position: relative;
@@ -124,6 +245,11 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+.icon--ps {
+  --url-icon: url("../img/play-menu-ico.png");
+  --size-icon: 4rem;
+}
+
 .icon--lens {
   --url-icon: url("../img/lens.svg");
 }
@@ -134,11 +260,13 @@ a:hover {
 
 .icon--hamburger {
   --url-icon: url("../img/bars-solid.svg");
+  background-size: cover;
+  margin-top: 2px;
 }
 
 .icon--globe {
   --url-icon: url("../img/language-globe.svg");
-  --size-icon: 1rem;
+  --size-icon: 1.2rem;
 }
 
 .icon--chevron-down {
@@ -149,62 +277,4 @@ a:hover {
 .icon--footer-ps-logo {
   --url-icon: url("../img/ps-footer.svg");
   --size-icon: 5rem;
-}
-
-.list-item:hover .icon--chevron-down {
-  --url-icon: url("../img/chevron-down-solid-hover.svg");
-}
-
-.my-btn,
-.my-btn:hover {
-  --btn-border: transparent;
-  --border-radius-btn: 1.3rem;
-  line-height: 2.6rem;
-  border-radius: var(--border-radius-btn);
-  padding: 0 0.9rem;
-  border: 1px solid hsla(var(--btn-border));
-  color: hsl(var(--btn-clr));
-}
-
-.my-btn {
-  background: hsl(var(--btn-bg));
-}
-
-.my-btn:hover {
-  background: hsla(var(--btn-bg), 0.8);
-}
-
-.my-btn--dark {
-  --btn-bg: var(--bg-dark-hsl);
-  --btn-clr: var(--clr-primary-hsl);
-}
-
-.my-btn--accent {
-  --btn-bg: var(--clr-accent-hsl);
-  --btn-clr: var(--clr-primary-hsl);
-}
-
-.my-btn--accent:hover {
-  --btn-clr: var(--clr-primary-hsl);
-}
-
-.my-btn--hamburger {
-  height: 100%;
-  --btn-border: #000000;
-  --border-radius-btn: 0.5rem;
-  opacity: 0.3;
-}
-
-.my-btn--hamburger:hover {
-  opacity: 1;
-}
-
-.my-btn--primary {
-  --btn-bg: var(--clr-primary-hsl);
-  --btn-clr: var(--clr-secondary-hsl);
-}
-
-.my-btn--secondary {
-  --btn-bg: var(--clr-secondary-hsl);
-  --btn-clr: var(--clr-primary-hsl);
 }

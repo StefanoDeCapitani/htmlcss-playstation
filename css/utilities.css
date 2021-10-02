@@ -1,24 +1,32 @@
+/*UTILITY CLASSES*/
+
 .a--text-black {
-  --clr-a: #000000;
+  --clr-a: hsl(var(--clr-dark-hsl));
 }
 
-.a--text-black:hover {
-  --clr-a: hsl(var(--clr-secondary-hsl)); /* #0d6efd; */
+.a--text-black:hover,
+.a--text-black:focus {
+  --clr-a: hsl(var(--clr-secondary-hsl));
 }
 
 .a--link-underline {
+  transition: opacity 0.3s;
   text-decoration: underline;
 }
 
-.text-clr-primary {
-  color: hsl(var(--clr-primary-hsl));
+.a--link-underline:hover {
+  opacity: 0.8;
 }
 
-.text-clr-primary {
+.my-text-primary {
   color: hsl(var(--clr-primary-hsl));
 }
 
 .my-text-black,
 .my-text-black:hover {
   color: hsl(var(--clr-black-hsl));
+}
+
+.my-pb-sm {
+  padding-bottom: var(--section-padding-sm);
 }
