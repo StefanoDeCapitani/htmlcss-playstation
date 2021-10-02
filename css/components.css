@@ -97,12 +97,13 @@ a:focus {
   padding-bottom: 0;
 }
 
-.section__h1 {
+.section__h1,
+.section__h2 {
   font-size: var(--fs-lg);
   margin-bottom: 0;
 }
 
-.section__h2 {
+.section__h3 {
   font-size: var(--fs-md);
   margin-bottom: 0;
 }
@@ -231,6 +232,7 @@ a:focus {
   display: inline-block;
   height: var(--size-icon);
   width: var(--size-icon);
+  transition: all 0.3s;
 }
 
 .icon::after {
@@ -252,10 +254,11 @@ a:focus {
 
 .icon--lens {
   --url-icon: url("../img/lens.svg");
+  filter: grayscale(1) contrast(15);
 }
 
 .icon--lens:hover {
-  opacity: 0.5;
+  filter: none;
 }
 
 .icon--hamburger {

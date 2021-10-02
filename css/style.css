@@ -2,15 +2,27 @@
 
 Table of contents:
 
-A: RESET
-B: LAYOUT COMPONENTS
-    - Section
-C: BUTTONS
-D: CUSTOM ICONS
+A: HEADER
+    1. NAV
+        - Main links
+        - Sub list
+B: MAIN
+    1. Hero--1 section
+    2. Game-cards carousel
+    3. PlayStation showcase
+    4. Hero--2 section
+    5. New releases
+    6. Hero--3 & Hero--4
+    7. Store showcase
+C: FOOTER
+    1. Logo and location
+    2. Site map
+D: MEDIA QUERIES    
+    1. MD
 
 ======================================*/
 
-/*HEADER*/
+/* >> A: HEADER >> */
 
 .header {
   position: fixed;
@@ -18,12 +30,6 @@ D: CUSTOM ICONS
   left: 0;
   width: 100%;
   z-index: 99;
-}
-
-.nav {
-  position: relative;
-  background-color: hsl(var(--clr-primary-hsl));
-  box-shadow: 0 0 10px 0 hsla(var(--clr-dark-hsl), 0.4);
 }
 
 .banner-top {
@@ -35,6 +41,16 @@ D: CUSTOM ICONS
 .banner-top__sony-logo {
   height: 1rem;
 }
+
+/* !! 1. NAV !! */
+
+.nav {
+  position: relative;
+  background-color: hsl(var(--clr-primary-hsl));
+  box-shadow: 0 0 10px 0 hsla(var(--clr-dark-hsl), 0.4);
+}
+
+/* -Main list- */
 
 .list-item .icon--chevron-down {
   transition: transform 0.3s;
@@ -49,7 +65,10 @@ D: CUSTOM ICONS
   transform: rotateZ(180deg);
 }
 
+/* -Sub list- */
+
 .sub-menu {
+  /*Sub-menu hidden by default*/
   position: absolute;
   top: -500px;
   left: 0;
@@ -66,26 +85,27 @@ D: CUSTOM ICONS
 }
 
 .list-item:focus-within .sub-menu {
+  /*Sub-menu hown on list-item:focus-within*/
   height: 180px;
   opacity: 1;
   top: 65px;
 }
 
-.sub-menu p {
-  margin-bottom: 0;
-}
-
+/*Sub-menu icon-links*/
 .sub-nav {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3rem;
   flex-grow: 1;
-}
-
-.sub-nav__link {
   text-align: center;
 }
+
+.sub-menu p {
+  margin-bottom: 0;
+}
+
+/*Sub-menu links with bullets*/
 
 .sub-sub-nav {
   display: flex;
@@ -100,6 +120,7 @@ D: CUSTOM ICONS
 }
 
 .sub-sub-nav li:before {
+  /*Custom bullets*/
   content: "\2219";
   font-size: 2rem;
   line-height: 0;
@@ -108,10 +129,9 @@ D: CUSTOM ICONS
   left: -1.2rem;
 }
 
-/*MAIN*/
+/* >> B: MAIN >> */
 
-/*Hero section - 1*/
-
+/* !! 1. Hero--1 section !! */
 .hero--1 {
   margin-top: 115px;
   height: 589px;
@@ -120,7 +140,7 @@ D: CUSTOM ICONS
   background-position: top;
 }
 
-/*cards hero 1 carousel*/
+/* !! 2. Game-cards carousel !! */
 .cards-carousel {
   padding-top: var(--section-padding-sm);
   padding-bottom: var(--section-padding-sm);
@@ -142,6 +162,7 @@ D: CUSTOM ICONS
 
 .game-card__img {
   border-radius: var(--border-radius);
+  transition: all 0.3s;
 }
 
 .game-card:hover:not(.active) .game-card__img {
@@ -169,6 +190,7 @@ D: CUSTOM ICONS
 }
 
 .game-card.active::after {
+  /*An outline to be shown when the card has the class attribute "active"*/
   content: "";
   position: absolute;
   top: -5px;
@@ -179,10 +201,6 @@ D: CUSTOM ICONS
   border-radius: 1.3rem;
 }
 
-/* .game-card:hover:not(.active) {
-  transform: translateY(-8px);
-} */
-
 .game-card__img,
 .product-card__img,
 .new-release-card__img,
@@ -191,7 +209,7 @@ D: CUSTOM ICONS
   max-width: 100%;
 }
 
-/*PlayStation showcase*/
+/* !! 3. PlayStation showcase !! */
 
 .product-card {
   opacity: 0.7;
@@ -222,10 +240,10 @@ D: CUSTOM ICONS
 }
 
 .new-release-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-/*Hero section - 2*/
+/* !! 4. Hero--2 section !! */
 
 .hero--2 {
   height: 620px;
@@ -234,7 +252,7 @@ D: CUSTOM ICONS
   background-position: top;
 }
 
-/*New releases*/
+/* !! 5. New releases !! */
 .new-releases {
   background: hsl(var(--bg-dark-hsl));
   padding-top: var(--section-padding-sm);
@@ -245,7 +263,7 @@ D: CUSTOM ICONS
   gap: 1rem;
 }
 
-/*Hero section - 3&4*/
+/* !! 6. Hero--3 & Hero--4 !! */
 
 .hero--3 {
   height: 400px;
@@ -262,7 +280,7 @@ D: CUSTOM ICONS
   max-height: 100%;
 }
 
-/*Store showcase*/
+/* !! 7. Store showcase !! */
 
 .store-showcase__img,
 .section--social__img {
@@ -274,13 +292,15 @@ D: CUSTOM ICONS
   transform: scale(0.95);
 }
 
-/*FOOTER*/
+/* >> C: FOOTER >> */
 
 .footer {
   background-color: hsl(var(--bg-blue-hsl));
   padding: var(--section-padding-lg) 0;
   font-size: var(--fs-xs);
 }
+
+/* !! 1. Logo and Location !! */
 
 .footer__ps-logo,
 .footer__sie-logo {
@@ -306,6 +326,7 @@ D: CUSTOM ICONS
   padding-right: 1.5rem;
 }
 
+/* !! 2. Site map !! */
 .footer-nav {
   padding-bottom: var(--section-padding-sm);
 }
@@ -330,6 +351,7 @@ D: CUSTOM ICONS
 
 @media only screen and (min-width: 768px) {
   .game-card::before {
+    /*Make the card casting a shadow on the background perspectively */
     content: "";
     position: absolute;
     top: 0;
@@ -346,6 +368,7 @@ D: CUSTOM ICONS
   }
 
   .game-card:hover:not(.active)::before {
+    /*When the card goes up on hover the shadow softens*/
     transform: skew(60deg, 0deg) rotateX(60deg) scaleY(0.5) translate(-10%, 20%);
     background-color: hsla(var(--clr-dark-hsl), 0.2);
   }
@@ -362,6 +385,7 @@ D: CUSTOM ICONS
     flex-direction: column;
     height: 200px;
   }
+
   .footer-nav {
     padding-bottom: 0;
   }
@@ -373,7 +397,8 @@ D: CUSTOM ICONS
 
 @media only screen and (min-width: 768px) and (max-width: 992px),
   screen and (min-width: 0px) and (max-width: 575px) {
-  .section__h1.comp-avoid-orphan {
+  .section__h1.avoid-orphan {
+    /*Avoid single-word wrap.*/
     width: 10ch;
   }
 }
