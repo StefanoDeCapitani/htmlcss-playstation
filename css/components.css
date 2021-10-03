@@ -134,92 +134,83 @@ a:focus {
 
 /* >> C: BUTTONS >> */
 
-.my-btn,
-.my-btn:hover {
+.btn-container {
+  position: relative;
+  z-index: 3;
+}
+
+.my-btn {
   --border-radius-btn: 1.5rem;
   line-height: 2.4rem;
   border-radius: var(--border-radius-btn);
   padding: 0 0.9rem;
   color: hsl(var(--btn-clr));
-}
-
-.my-btn {
+  position: relative;
   background: hsl(var(--btn-bg));
-  border: 2px solid hsl(var(--btn-border));
-  box-shadow: 0 0 0 2px hsl(var(--btn-bg));
-}
-
-.my-btn--accent::after,
-.my-btn {
-  transition: border 0.3s, opacity 0.3s;
+  z-index: auto;
 }
 
 .my-btn:hover,
 .my-btn:focus {
   color: hsl(var(--btn-clr));
-  border: 2px solid hsla(var(--btn-hover-border));
+}
+
+.my-btn::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  background: hsl(var(--btn-bg));
+  border: 2px solid hsl(var(--btn-bg));
+  border-radius: var(--border-radius-btn);
+  z-index: -1;
+  transition: all 0.3s;
+  isolation: isolate;
+}
+
+.my-btn:hover::after,
+.my-btn:focus::after {
+  background: hsl(var(--btn-inner-border));
 }
 
 .my-btn--dark {
   --btn-bg: var(--bg-dark-hsl);
   --btn-clr: var(--clr-primary-hsl);
-  --btn-border: var(--btn-bg);
-  --btn-hover-border: var(--clr-primary-hsl);
+  --btn-inner-border: var(--clr-primary-hsl);
 }
 
 .my-btn--primary {
   --btn-bg: var(--clr-primary-hsl);
   --btn-clr: var(--clr-secondary-hsl);
-  --btn-border: var(--btn-bg);
-  --btn-hover-border: var(--btn-clr);
+  --btn-inner-border: var(--btn-clr);
 }
 
 .my-btn--primary.my-text-black {
-  --btn-hover-border: var(--clr-black-hsl);
+  --btn-inner-border: var(--clr-black-hsl);
 }
 
 .my-btn--secondary {
   --btn-bg: var(--clr-secondary-hsl);
   --btn-clr: var(--clr-primary-hsl);
-  --btn-border: var(--btn-bg);
-  --btn-hover-border: var(--clr-primary-hsl);
+  --btn-inner-border: var(--clr-primary-hsl);
 }
 
 .my-btn--accent {
   --btn-bg: var(--clr-accent-hsl);
   --btn-clr: var(--clr-primary-hsl);
   box-shadow: none;
-  border: none;
   position: relative;
   margin-left: 4px;
-}
-
-.my-btn--accent::after {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  border: 5px solid hsl(var(--btn-bg));
-  border-radius: var(--border-radius-btn);
-}
-
-.my-btn--accent:hover::after,
-.my-btn--accent:focus::after {
-  border: 2px solid hsl(var(--btn-bg));
 }
 
 .my-btn--hamburger {
   height: 3rem;
   width: 3.5rem;
-  --btn-border: var(--clr-dark-hsl);
+  border: 2px solid hsl(var(--clr-dark-hsl));
   --border-radius-btn: 0.5rem;
   opacity: 1;
 }
 
 .my-btn--hamburger:hover {
-  --btn-hover-border: var(--clr-black-hsl);
   --border-radius-btn: 0.5rem;
   opacity: 0.3;
 }
@@ -249,7 +240,6 @@ a:focus {
 
 .icon--ps {
   --url-icon: url("../img/play-menu-ico.png");
-  --size-icon: 4.5rem;
 }
 
 .icon--lens {

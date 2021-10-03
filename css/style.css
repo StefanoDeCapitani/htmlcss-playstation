@@ -86,8 +86,8 @@ D: MEDIA QUERIES
 
 /* -Sub list- */
 
-.sub-menu {
-  /*Sub-menu hidden by default*/
+.drop-down {
+  /*drop-down hidden by default*/
   position: absolute;
   top: -100px;
   left: 0;
@@ -98,11 +98,11 @@ D: MEDIA QUERIES
   display: flex;
   flex-direction: column;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.8s;
 }
 
 .nav .ul:focus-within ~ .nav__logo img {
-  height: 33px;
+  height: 43px;
 }
 
 .nav .ul:focus-within .list-item {
@@ -112,7 +112,7 @@ D: MEDIA QUERIES
 
 .nav .ul:focus-within ~ div .my-btn,
 .nav .ul:focus-within .list-item__a {
-  line-height: 25px;
+  line-height: 1.6rem;
 }
 
 .nav .ul:focus-within ~ div .icon--lens {
@@ -123,14 +123,14 @@ D: MEDIA QUERIES
   height: 250px;
 }
 
-.list-item:focus-within .sub-menu {
+.list-item:focus-within .drop-down {
   top: 62px;
   height: 200px;
   opacity: 1;
 }
 
-/*Sub-menu icon-links*/
-.sub-nav {
+/*drop-down icon-links*/
+.drop-down__nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,7 +139,7 @@ D: MEDIA QUERIES
   text-align: center;
 }
 
-.sub-nav__link {
+.drop-down__link {
   width: 110px;
   height: 110px;
   display: flex;
@@ -148,18 +148,27 @@ D: MEDIA QUERIES
   padding: 0.5rem;
 }
 
-.sub-nav__link:hover {
-  border-radius: 0.2rem;
+.drop-down__link:hover {
+  border-radius: 0.3rem;
   box-shadow: 0 0 10px 0 hsla(var(--clr-dark-hsl), 0.4);
 }
 
-.sub-menu p {
-  margin-bottom: 0;
+.drop-down__icon {
+  --size-icon: 4.5rem;
 }
 
-/*Sub-menu links with bullets*/
+.drop-down__icon.icon--ps {
+  margin-left: 1rem;
+}
 
-.sub-sub-nav {
+.drop-down__p {
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+/*drop-down links with bullets*/
+
+.drop-down__secondary-nav {
   display: flex;
   justify-self: flex-end;
   justify-content: center;
@@ -169,29 +178,41 @@ D: MEDIA QUERIES
   border-top: 1px solid hsla(var(--bg-dark-hsl), 0.3);
 }
 
-.sub-sub-nav li {
+.drop-down__secondary-nav .a--text-black {
   position: relative;
+  font-weight: 500;
 }
 
-.sub-sub-nav li:before {
+.drop-down__secondary-nav .a--text-black:before {
   /*Custom bullets*/
   content: "\2219";
-  font-size: 2rem;
+  color: hsl(var(--clr-secondary-hsl));
+  font-size: 2.4rem;
   line-height: 0;
   position: absolute;
-  top: 0.6rem;
-  left: -1.2rem;
+  top: 0.55rem;
+  left: -1.3rem;
 }
 
 /* >> B: MAIN >> */
 
 /* !! 1. Hero--1 section !! */
-.hero--1 {
+.hero--1,
+.hero--2 {
+  position: relative;
   margin-top: 100px;
   height: 589px;
-  background-image: url(../img/returnal-cover.jpeg);
-  background-size: cover;
-  background-position: top;
+}
+
+.hero--1__img,
+.hero--2__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: -1;
 }
 
 /* !! 2. Game-cards carousel !! */
@@ -299,9 +320,6 @@ D: MEDIA QUERIES
 
 .hero--2 {
   height: 620px;
-  background-image: url(../img/it-takes-two-hero-banner-desktop.jpg);
-  background-size: cover;
-  background-position: top;
 }
 
 /* !! 5. New releases !! */
