@@ -328,6 +328,7 @@
           <!-- HAMBUERGER NAV Start -->
           <div class="hamburgher-menu ms-auto">
             <a
+              autofocus
               href="#"
               class="
                 my-btn my-btn--hamburger
@@ -341,44 +342,49 @@
             <div class="drop-down--mobile h-100 d-lg-none">
               <ul class="drop-down--mobile__menu p-4">
                 <li class="drop-down--mobile__list-item">
-                  <a class="drop-down--mobile__link a--text-black" href="#"
+                  <a
+                    class="drop-down--mobile__link a--text-black"
+                    autofocus
+                    href="#"
                     ><i class="icon icon--game-pad"></i
                     ><span class="ps-4">Giochi</span
                     ><i class="icon icon--angle-right ms-auto"></i>
-                    <div class="right-side">
-                      <ul class="right-side__nav">
-                        <li>
-                          <a href="#" class="right-side__link">
+                  </a>
+                  <div class="right-side d-flex flex-column">
+                    <div class="container-fluid right-side__container">
+                      <ul class="row row-cols-2 right-side__nav">
+                        <li class="right-side__list-item">
+                          <a href="#" class="col right-side__link">
                             <i class="icon icon--ps right-side__icon"></i>
                             <p class="right-side__p">PS1</p>
                           </a>
                         </li>
-                        <li>
-                          <a href="#" class="right-side__link">
+                        <li class="right-side__list-item">
+                          <a href="#" class="col right-side__link">
                             <i class="icon icon--ps right-side__icon"></i>
                             <p class="right-side__p">PS1</p>
                           </a>
                         </li>
-                        <li>
-                          <a href="#" class="right-side__link">
+                        <li class="right-side__list-item">
+                          <a href="#" class="col right-side__link">
                             <i class="icon icon--ps right-side__icon"></i>
                             <p class="right-side__p">PS1</p>
                           </a>
-                        </li>
-                      </ul>
-                      <ul class="right-side__secondary-nav">
-                        <li>
-                          <a class="a--text-black" href="#">sub link giochi</a>
-                        </li>
-                        <li>
-                          <a class="a--text-black" href="#">sub link</a>
-                        </li>
-                        <li>
-                          <a class="a--text-black" href="#">sub link</a>
                         </li>
                       </ul>
                     </div>
-                  </a>
+                    <ul class="right-side__secondary-nav">
+                      <li>
+                        <a class="a--text-black" href="#">Sub link giochi</a>
+                      </li>
+                      <li>
+                        <a class="a--text-black" href="#">Sub link</a>
+                      </li>
+                      <li>
+                        <a class="a--text-black" href="#">Sub link</a>
+                      </li>
+                    </ul>
+                  </div>
                 </li>
                 <li class="drop-down--mobile__list-item">
                   <a class="drop-down--mobile__link a--text-black" href="#"
@@ -418,7 +424,7 @@
               </ul>
             </div>
           </div>
-          <!-- HAMBUERGER NAV End -->
+          <!-- HAMBURGER NAV End -->
           <a
             href="#"
             class="my-btn my-btn--close d-flex align-items-center d-lg-none"
