@@ -64,6 +64,13 @@ a:focus {
   color: var(--clr-a);
 }
 
+button,
+select,
+input {
+  border: none;
+  background-color: transparent;
+}
+
 /* >> B: LAYOUT COMPONENTS >> */
 
 /*Section*/

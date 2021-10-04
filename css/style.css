@@ -88,6 +88,75 @@ D: MEDIA QUERIES
   padding-top: 0.7rem;
 }
 
+.nav__search-container:focus-within .nav__search-bar {
+  display: block;
+}
+
+.nav__search-bar {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: hsla(var(--bg-dark-hsl), 0.5);
+}
+
+.nav__search-form {
+  --form-height: 50px;
+  position: absolute;
+  right: 100px;
+  top: 105px;
+  width: 500px;
+  height: var(--form-height);
+  background-color: hsl(var(--clr-primary-hsl));
+  display: flex;
+}
+
+.nav__select--search {
+  padding: 0.5rem;
+}
+
+.nav__select--search:focus-within {
+  box-shadow: 0 0 3px 1px hsl(var(--clr-secondary-hsl)) inset;
+}
+
+.nav__search-form select {
+  width: 100%;
+  height: 100%;
+}
+
+.nav__search-form select:focus,
+.nav__search-form input:focus,
+.nav__search-form button:focus {
+  outline: none;
+}
+
+.nav__search-form input {
+  padding: 0 1rem;
+  flex: 1 1 auto;
+  border-left: 1px solid hsla(var(--bg-dark-hsl), 0.2);
+  font-size: var(--fs-sm);
+  font-weight: 300;
+}
+
+.nav__search-form input::placeholder {
+  font-size: var(--fs-sm);
+  font-weight: 300;
+}
+
+.nav__search-form button {
+  flex: 0 0 var(--form-height);
+  background-color: hsl(var(--bg-blue-hsl));
+}
+
+.nav__search-form button:focus {
+  box-shadow: 0 0 3px 1px hsl(var(--clr-secondary-hsl)) inset;
+}
+
+.nav__search-form button .icon--lens {
+  filter: grayscale(1) contrast(15) invert(100%);
+  --size-icon: 1.4rem;
+  margin-top: 0.4rem;
+}
+
 /* -Sub list- */
 
 .drop-down,
@@ -435,6 +504,11 @@ D: MEDIA QUERIES
 }
 
 /* !! 3. PlayStation showcase !! */
+
+.cards-carousel--products {
+  row-gap: 2rem;
+  padding-bottom: 0;
+}
 
 .product-card {
   opacity: 0.7;
