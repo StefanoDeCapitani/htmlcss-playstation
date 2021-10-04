@@ -141,7 +141,7 @@ a:focus {
 
 .my-btn {
   --border-radius-btn: 1.5rem;
-  line-height: 2.4rem;
+  line-height: 2rem;
   border-radius: var(--border-radius-btn);
   padding: 0 0.9rem;
   color: hsl(var(--btn-clr));
@@ -164,7 +164,6 @@ a:focus {
   border-radius: var(--border-radius-btn);
   z-index: -1;
   transition: all 0.3s;
-  isolation: isolate;
 }
 
 .my-btn:hover::after,
@@ -202,17 +201,21 @@ a:focus {
   margin-left: 4px;
 }
 
-.my-btn--hamburger {
+.my-btn--hamburger,
+.my-btn--close {
   height: 3rem;
   width: 3.5rem;
-  border: 2px solid hsl(var(--clr-dark-hsl));
-  --border-radius-btn: 0.5rem;
   opacity: 1;
 }
 
-.my-btn--hamburger:hover {
-  --border-radius-btn: 0.5rem;
+.my-btn--hamburger:hover,
+.my-btn--close:hover {
   opacity: 0.3;
+}
+
+.my-btn--hamburger {
+  border: 2px solid hsl(var(--clr-dark-hsl));
+  --border-radius-btn: 0.5rem;
 }
 
 /* >> D: CUSTOM ICONS >> */
@@ -245,6 +248,7 @@ a:focus {
 .icon--lens {
   --url-icon: url("../img/lens.svg");
   filter: grayscale(1) contrast(15);
+  --size-icon: 1.6rem;
 }
 
 .icon--lens:hover {
@@ -253,8 +257,39 @@ a:focus {
 
 .icon--hamburger {
   --url-icon: url("../img/bars-solid.svg");
-  background-size: cover;
   margin-top: 2px;
+}
+
+.icon--times {
+  --url-icon: url("../img/times-solid.svg");
+}
+
+.icon--game-pad {
+  --url-icon: url("../img/gamepad-solid.svg");
+}
+
+.icon--microchip {
+  --url-icon: url("../img/microchip-solid.svg");
+}
+
+.icon--desktop {
+  --url-icon: url("../img/desktop-solid.svg");
+}
+
+.icon--newspaper {
+  --url-icon: url("../img/newspaper-regular.svg");
+}
+
+.icon--shopping-bag {
+  --url-icon: url("../img/shopping-bag-solid.svg");
+}
+
+.icon--info {
+  --url-icon: url("../img/info-circle-solid.svg");
+}
+
+.icon--angle-right {
+  --url-icon: url("../img/angle-right-solid.svg");
 }
 
 .icon--globe {
